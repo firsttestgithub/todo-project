@@ -1,0 +1,147 @@
+*{
+	margin:0;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	box-sizing: border-box;
+}
+body{
+	background-image: url('./1ab701e9-3e64-4973-9ea0-618306b42fe4.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.todo-content{
+	background-color: #ffff;
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50% , -50%);	
+	box-shadow: 10px 20px 10px  rgb(0, 0, 0);	
+}
+.todo-wrapper{
+padding: 20px;
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.todo-task{
+	margin: 10px;
+}
+.todo-task li{
+	list-style: none;
+	line-height: 30px;
+	font-size: 26px;
+	font-family: "Playwrite MX", cursive;
+	padding: 5px;
+	background: -webkit-linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+h1{
+	text-align: center;
+	
+	background: linear-gradient(to left, #0c010e, #ffffff);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: animate 2s infinite;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+
+
+  
+  @keyframes animate {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(1);
+	}
+  }
+.todo-wrapper input{
+	width: 380px;
+	padding: 16px;
+	
+	color: white;
+	border: 0;
+	outline: 0;
+	font-size: 25px;
+	background: #000;
+	border-top-right-radius: 38px;
+	border-bottom-right-radius: 38px;
+}
+.todo-wrapper button{
+	padding:16px 26px 15px 25px;
+    background: #000;
+    color: white;
+    border-radius: 38px;
+	cursor: pointer;
+    font-size: 17px;
+    margin-left: 10px;
+	text-align: center;
+	border:0;
+	transition: ease-in-out 0.3s;
+}
+.todo-wrapper button:hover{
+	background: #796d6d;
+}
+.todo-wrapper  i{
+	
+}
+.todo-wrapper .search{
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+	background: #000;
+	padding: 20px;
+	border-top-left-radius: 38px;
+	border-bottom-left-radius: 38px;
+	position: relative;
+	left: 5px;
+}
+.trash{
+	float: right;
+	color: wheat !important;
+cursor: pointer;	
+}
+
+@media only screen and (max-width: 600px) {
+	.todo-content{
+	width: 100%;
+
+	flex-direction: column;
+	display: flex;
+
+	
+	}
+	.todo-wrapper {
+
+		display: flex;
+		
+	}
+	.todo-wrapper input{
+		width: 100%;
+		border-radius: 20px;
+	}
+	.todo-wrapper .search{
+		display: none;
+	}
+	.todo-wrapper button{
+		display: flex;
+	
+		justify-content: center;
+		margin: 0 auto;
+		width: 50%;
+		margin-top: 20px;
+		background: linear-gradient(to left, #ffffff, #000000);
+	}
+}
